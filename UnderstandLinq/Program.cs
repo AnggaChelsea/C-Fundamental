@@ -22,7 +22,12 @@
             //linq method
             var descanding = mycar.OrderByDescending(x => x.Year).ToList();
             //var fortuner = mycar.Where(p => p.VIN == "A1" && p.Year == "2022 ").ToList();
-
+            var total = mycar.Sum(p => p.Price);
+            Console.WriteLine(total);
+            if(total >= 22000)
+            {
+                Console.WriteLine($"waduh mayan juga ya totalnya {total} kalau totalnya di kurang ongkos jadi totalnya {total - 400}");
+            }
             //get first in object
             var first = mycar .OrderByDescending(x => x.Year).First(p => p.Year == "2023");
             //Console.WriteLine(first.VIN);
